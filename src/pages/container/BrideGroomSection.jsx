@@ -1,6 +1,5 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import MotionOpacity from '../../components/ui/motionOpacity'
 import thegroom from '../../assets/images/thegroom.jpg'
 import thebride from '../../assets/images/thebride.jpg'
 import thegroombride1 from '../../assets/images/thegroombride-1.jpg'

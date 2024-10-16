@@ -1,5 +1,5 @@
 import React from 'react'
-import Banner from '../../components/Banner'
+import { Banner } from '../../components/Banner'
 import { motion } from 'framer-motion'
 import thegroombride from '../../assets/images/gallery/thegroombride.jpg'
 

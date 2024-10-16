@@ -16,7 +16,7 @@ const imagesSecondRow = [
     },
     {
         image: potrait2,
-    }
+    },
 ]
 
 const imageFirstRow = [

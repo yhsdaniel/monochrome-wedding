@@ -65,7 +65,7 @@ export default function RSVPSection() {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 1 }}
-                className='text-2xl text-center my-8 font-parisienne'
+                className='text-2xl text-center my-4 font-parisienne'
             >
                 Confirmation of Attendance
             </motion.h1>
@@ -74,48 +74,47 @@ export default function RSVPSection() {
                 whileInView={{ opacity: 1, translateX: 1 }}
                 transition={{ duration: 1, delay: 1 }}
                 viewport={{ once: true }}
-                className='p-8 m-4 rounded-2xl'
+                className='p-4 m-4 rounded-2xl'
             >
                 <form onSubmit={handleSubmit} className="max-w-sm mx-auto">
-                    <div className="mb-2">
-                        <label htmlFor="name" className="block mb-1 text-sm font-medium text-black">Nama</label>
-                        <input type="name" id="name" name='name' value={formData.name} className="border border-gray-300 text-black text-sm rounded-lg block w-full p-2 bg-transparent placeholder:text-black/50" placeholder="Nama ..." onChange={handleChange} />
+                    <div className="mb-4">
+                        <label htmlFor="name" className="block mb-1 text-sm font-medium text-black">Full Name</label>
+                        <input type="name" id="name" name='name' value={formData.name} className="border-b border-gray-300 text-black text-sm block w-full p-2 bg-transparent placeholder:text-black/50 focus-visible:border-none" placeholder="Nama ..." onChange={handleChange} />
                     </div>
-                    <div className='mb-2'>
-                        <label htmlFor="message" className="block mb-1 text-sm font-medium text-black">Ucapan:</label>
+                    <div className='mb-4'>
+                        <label htmlFor="message" className="block mb-1 text-sm font-medium text-black">Message:</label>
                         <textarea id="message" name='message' rows="4" value={formData.message} className="border border-gray-300 text-black text-sm rounded-lg block w-full p-2 bg-transparent placeholder:text-black/50" placeholder="Ucapan..." onChange={handleChange}></textarea>
                     </div>
-                    <div className='mb-2'>
-                        <label htmlFor="attendance" className="block mb-1 text-sm font-medium text-black">Konfirmasi kehadiran</label>
+                    <div className='mb-4'>
+                        <label htmlFor="attendance" className="block mb-1 text-sm font-medium text-black">Confirmation of Attendance</label>
                         <select id="attendance" name='attendance' value={formData.attendance} className="border border-gray-300 text-black text-sm rounded-lg block w-full p-2 bg-transparent placeholder:text-black/50" required onChange={handleChange}>
                             <option value='true'>Hadir</option>
                             <option value='false'>Tidak hadir</option>
                         </select>
                     </div>
                     {isVisible === 'true' ? (
-                        <div className='mb-2'>
-                            <label htmlFor="guest" className="block mb-1 text-sm font-medium text-black">Tamu</label>
+                        <div className='mb-4'>
+                            <label htmlFor="guest" className="block mb-1 text-sm font-medium text-black">Guests</label>
                             <select id="guest" name='guest' value={formData.guest} className="border border-gray-300 text-black text-sm rounded-lg block w-full p-2 bg-transparent placeholder:text-black/50" required onChange={handleChange}>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
+                                <option value="1">1 guest</option>
+                                <option value="2">2 guests</option>
                             </select>
                         </div>
                     ) : null}
-                    <button type="submit" className="text-black bg-black/30 my-3 hover:bg-black/50 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2 text-center duration-150 ease-in-out" onClick={handleSubmit}>Submit</button>
+                    <div className='my-8 mx-[20%]'>
+                        <button type="submit" className="text-white hover:text-black bg-black hover:bg-white border border-black/40 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full px-12 py-3 text-center duration-150 ease-in-out" onClick={handleSubmit}>Submit</button>
+                    </div>
                 </form>
 
                 {/*========== Chat Section ========== */}
-                <div className='my-3 max-w-sm mx-auto bg-black/10 rounded-xl'>
-                    <div className='max-h-72 overflow-y-auto overflow-x-auto border border-black/20 rounded-xl'>
+                <div className='my-3 max-w-sm mx-auto bg-white/40 rounded-xl'>
+                    <div className='max-h-72 overflow-y-auto overflow-x-auto border border-black/10 rounded-xl'>
                         {dataAttendance?.map(value => (
                             <div key={value.id} className='p-2 flex text-sm text-black'>
                                 <div className='w-2/12 flex justify-center items-start'>
                                     <GenerateAvatar name={value.name} />
                                 </div>
-                                <div className='flex-1 py-2 px-4 bg-black/10 rounded-lg shadow-black/20 shadow-md'>
+                                <div className='flex-1 py-2 px-4 bg-gray-100 rounded-lg shadow-black/20 shadow-md'>
                                     <p className='font-bold text-sm my-1'>{value.name}</p>
                                     <p className='text-sm break-words'>{value.message}</p>
                                 </div>

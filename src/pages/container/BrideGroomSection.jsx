@@ -55,15 +55,15 @@ export default function BrideGroomSection() {
             <div className='relative size-full'>
                 <motion.div initial="offscreen" whileInView="onscreen" variants={motionVariants} viewport={{ once: true, amount: 0.8 }}
                     className='overflow-hidden max-w-fit'>
-                    <img src={thegroombride1} alt="" className='w-3/4 m-auto h-auto p-2 rounded-xl' loading='lazy' />
+                    <img src={thegroombride1} alt="" className='h-auto p-2 rounded-xl' loading='lazy' />
                 </motion.div>
                 <motion.div initial="offscreen" whileInView="onscreen" variants={motionVariants} viewport={{ once: true, amount: 0.8 }}
                     className='rounded-xl overflow-hidden max-w-fit'>
-                    <img src={thegroombride2} alt="" className='w-3/4 m-auto h-auto p-2 rounded-xl' loading='lazy' />
+                    <img src={thegroombride2} alt="" className='h-auto p-2 rounded-xl' loading='lazy' />
                 </motion.div>
                 <motion.div initial="offscreen" whileInView="onscreen" variants={motionVariants} viewport={{ once: true, amount: 0.8 }}
                     className='rounded-xl overflow-hidden max-w-fit'>
-                    <img src={thegroombride3} alt="" className='w-3/4 m-auto h-auto p-2 rounded-xl' loading='lazy' />
+                    <img src={thegroombride3} alt="" className='h-auto p-2 rounded-xl' loading='lazy' />
                 </motion.div>
             </div>
         </section>

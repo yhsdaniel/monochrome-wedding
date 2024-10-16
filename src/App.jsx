@@ -1,11 +1,11 @@
 import { motion } from "framer-motion"
 import music from './upload/music.mp3'
 
-import banner1 from './assets/images/banner1.jpg'
 import ring from './assets/images/ring.png'
 import dinner from './assets/images/dinner.png'
 import dresscode from './assets/images/dresscode.png'
 import thegroombride3 from './assets/images/thegroombride-3.jpg'
+import thegroombride from './assets/images/gallery/thegroombride.jpg'
 import Banner from './components/banner'
 import Header from './components/header'
 
@@ -38,9 +38,6 @@ function App() {
 
   return (
     <>
-      <audio autoPlay controls>
-        <source src={audioMusic} type="audio/mp3"/>
-      </audio>
       <div div className='flex relative overflow-x-hidden'>
         <div className='h-screen hidden sm:block md:w-7/12 lg:w-8/12 relative'>
           <BannerDesktopSection />
@@ -50,7 +47,7 @@ function App() {
             <Header menu={true} logo='I & M' />
           </section>
           <section>
-            <Banner imageFile={banner1}>
+            <Banner imageFile={thegroombride}>
               <motion.div initial="offscreen" whileInView="onscreen" variants={motionVariants} viewport={{ once: true, amount: 0.8 }} className='relative text-white text-sm text-center'>
                 <div className='font-quicksand tracking-[0.5em]'>
                   <p>THE WEDDING OF</p>

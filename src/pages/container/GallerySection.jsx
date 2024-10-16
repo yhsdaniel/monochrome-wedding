@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import { AnimatePresence, easeOut, motion } from 'framer-motion'
-import potrait1 from '../../assets/images/potrait-1.jpg'
-import potrait2 from '../../assets/images/potrait-2.jpg'
-import landscape1 from '../../assets/images/landscape-1.jpg'
-import landscape2 from '../../assets/images/landscape-2.jpg'
-import landscape3 from '../../assets/images/landscape-3.jpg'
-import landscape4 from '../../assets/images/landscape-4.jpg'
+import { AnimatePresence, motion } from 'framer-motion'
+import potrait1 from '../../assets/images/gallery/image1.jpg'
+import potrait2 from '../../assets/images/gallery/thegroombride.jpg'
+import landscape1 from '../../assets/images/gallery/image2.jpg'
+import landscape2 from '../../assets/images/gallery/image3.jpg'
+import landscape3 from '../../assets/images/gallery/image4.jpg'
+import landscape4 from '../../assets/images/gallery/image5.jpg'
 
 const imagesSecondRow = [
     {

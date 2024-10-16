@@ -61,9 +61,6 @@ export default function RSVPSection() {
 
     return (
         <section className='h-full p-4'>
-            {/* <TitleComponent>
-                Konfirmasi Kehadiran & Ucapan
-            </TitleComponent> */}
             <motion.div
                 initial={{ opacity: 0, translateX: 100 }}
                 whileInView={{ opacity: 1, translateX: 1 }}

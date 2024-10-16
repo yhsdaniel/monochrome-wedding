@@ -7,7 +7,7 @@ import BrideGroomSection from './container/BrideGroomSection'
 import TimeLocationSection from './container/TimeLocationSection'
 import GallerySection from './container/GallerySection'
 import RSVPSection from './container/RSVPSection'
-import Header from '../components/header'
+import Header from './components/header'
 import { useParams } from 'react-router-dom'
 import { supabase } from '../supabase'
 

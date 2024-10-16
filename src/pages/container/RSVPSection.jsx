@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { supabase } from '../../supabase'
 import toast from 'react-hot-toast'
-import GenerateAvatar from '../../components/GenerateAvatar'
+import GenerateAvatar from '../components/GenerateAvatar'
 
 export default function RSVPSection() {
     const [formData, setFormData] = useState({

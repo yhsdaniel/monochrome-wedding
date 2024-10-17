@@ -25,7 +25,7 @@ export default function GenerateAvatar({ name }) {
     let color = generateBackground(name)
     const customStyle =
     {
-        background: color
+        background: color,
     }
 
     return (

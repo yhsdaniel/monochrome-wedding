@@ -45,7 +45,7 @@
 
 /* TOGGLE STYLING */
 .toggle {
-  margin: 2rem 0rem;
+  margin: 1rem 0rem 2rem 0rem;
   box-sizing: border-box;
   font-size: 0;
   display: flex;
@@ -64,6 +64,7 @@
 .toggle input+label {
   margin: 0;
   width: 100%;
+  cursor: pointer;
   padding: 0.75rem 0;
   box-sizing: border-box;
   position: relative;

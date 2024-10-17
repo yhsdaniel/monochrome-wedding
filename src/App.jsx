@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import './App.css'
 import MainPages from "./pages/MainPages"
+import { Toaster } from 'react-hot-toast'
 
 function App() {
 
@@ -11,6 +12,8 @@ function App() {
           <Route path='/:username' element={<MainPages />} />
         </Routes>
       </Router>
+
+      <Toaster position='top center'/>
     </>
   )
 }

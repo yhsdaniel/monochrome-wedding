@@ -32,9 +32,12 @@ export default function RSVPSection() {
     async function getAllAttendance() {
         try {
             fetchUserData()
-            const { data: user, error } = await supabase.from('attendance').select(`*`).eq('bride_id', userData.id)
+            
+            if (!userData?.id) return;
+
+            const { data: user, error } = await supabase.from('attendance').select(`*`).eq('bride_id', userData?.id)
             setDataAttendance(user)
-            setFormData({ name: '', message: '', attendance: 'true', guest: '1', church: 'false', reception: 'false', bride_id: userData.id })
+            setFormData({ name: '', message: '', attendance: 'true', guest: '1', church: 'false', reception: 'false', bride_id: userData?.id })
             setIsVisible('true')
 
             if (error) throw error
@@ -89,7 +92,7 @@ export default function RSVPSection() {
 
     useEffect(() => {
         getAllAttendance()
-    }, [username, dataAttendance])
+    }, [userData, dataAttendance])
 
     return (
         <section className='h-full py-4 px-8 font-cormorantgaramond'>

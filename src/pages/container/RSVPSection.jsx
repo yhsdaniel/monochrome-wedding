@@ -32,7 +32,7 @@ export default function RSVPSection() {
     async function getAllAttendance() {
         try {
             fetchUserData()
-            
+
             if (!userData?.id) return;
 
             const { data: user, error } = await supabase.from('attendance').select(`*`).eq('bride_id', userData?.id)
@@ -92,7 +92,7 @@ export default function RSVPSection() {
 
     useEffect(() => {
         getAllAttendance()
-    }, [userData, dataAttendance])
+    }, [])
 
     return (
         <section className='h-full py-4 px-8 font-cormorantgaramond'>

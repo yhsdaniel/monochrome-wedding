@@ -10,6 +10,7 @@ import RSVPSection from './container/RSVPSection'
 import Header from './components/header'
 import { useParams } from 'react-router-dom'
 import { supabase } from '../supabase'
+import ThankyouSection from './container/ThankyouSection'
 
 export default function MainPages() {
   const { username } = useParams()
@@ -46,6 +47,7 @@ export default function MainPages() {
             <TimeLocationSection />
             <GallerySection />
             <RSVPSection userData={userData}/>
+            <ThankyouSection />
           </div>
         </div>
       </>

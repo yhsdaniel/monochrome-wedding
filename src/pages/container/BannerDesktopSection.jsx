@@ -18,7 +18,7 @@ export default function BannerDesktopSection() {
                 whileInView={{ opacity: 1, translateX: 1 }}
                 transition={{ duration: 1 }}
                 viewport={{ once: true }}
-                className='text-4xl my-4 font-greatvibes'
+                className='text-4xl my-4 tracking-widest font-darleston'
             >
                 Ivan & Maria
             </motion.p>

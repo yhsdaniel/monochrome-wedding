@@ -3,7 +3,7 @@ import { IoIosMenu } from 'react-icons/io'
 
 const Header = ({menu=false, logo=''}) => {
   return (
-    <div className='fixed bg-transparent w-full h-16 p-5 text-white'>
+    <div className='fixed bg-transparent w-full h-16 p-5 text-white z-50'>
         <div className='flex justify-between font-cormorantgaramond tracking-widest'>
             {
                 logo ? <p className='text-xl'>{logo}</p> : null

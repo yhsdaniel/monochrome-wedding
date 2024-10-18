@@ -93,7 +93,7 @@ export default function RSVPSection({ userData }) {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 1 }}
-                className='text-4xl text-center my-4 tracking-wider font-darleston'
+                className='text-2xl text-center my-4 tracking-wider font-greatvibes'
             >
                 See you there!
             </motion.h1>

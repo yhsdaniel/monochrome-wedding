@@ -24,12 +24,12 @@ export default function BannerSection() {
                     <div className='font-quicksand tracking-[0.5em]'>
                         <p>THE WEDDING OF</p>
                     </div>
-                    <div className='text-6xl tracking-widest font-cormorantgaramond'>
+                    <div className='text-5xl tracking-widest font-cormorantgaramond'>
                         <h1>IVAN</h1>
                         <h1>MARIA</h1>
                     </div>
                     <div className='font-dancing text-xl'>
-                        <p>7 December 2024</p>
+                        <p>Saturday, 7 December 2024</p>
                     </div>
                 </motion.div>
             </Banner>

@@ -21,34 +21,34 @@ const motionVariants = {
 
 export default function BrideGroomSection() {
     return (
-        <section>
-            <div className='flex justify-center items-center size-full my-28'>
+        <section className='my-26'>
+            <div className='flex justify-center items-center size-full my-10'>
                 <p className='font-quicksand tracking-[0.5em] text-sm font-bold'>THE GROOM & BRIDE</p>
             </div>
-            <div className='flex justify-center items-center size-full'>
+            <div className='flex flex-col justify-center items-center size-full mb-4'>
                 <motion.div initial="offscreen" whileInView="onscreen" variants={motionVariants} viewport={{ once: true, amount: 0.8 }}
                     className='bg-white rounded-xl border-2 box-border overflow-hidden max-w-fit w-3/5 h-full block border-gray-500 drop-shadow-md shadow-lg shadow-gray-300'>
                     <img src={thegroom} alt="" className='w-full h-auto p-2 rounded-xl' loading='lazy' />
                 </motion.div>
-            </div>
-            <div className='relative text-center mt-10'>
-                <h1 className='font-cormorantgaramond text-6xl'>IVAN</h1>
-                <div className='py-10 text-md font-semibold'>
-                    <p className='text-sm font-quicksand tracking-widest'>SON OF</p>
-                    <p className='italic font-cormorantgaramond py-5 px-5'>Mr.Lo Swie Djiang & Mrs.Lie Pik Tjiam</p>
+                <div className='relative text-center mt-4'>
+                    <h1 className='font-cormorantgaramond text-6xl'>IVAN</h1>
+                    <div className='py-4 text-md font-semibold'>
+                        <p className='text-sm font-quicksand tracking-widest'>SON OF</p>
+                        <p className='italic font-cormorantgaramond py-5 px-5'>Mr.Lo Swie Djiang & Mrs.Lie Pik Tjiam</p>
+                    </div>
                 </div>
             </div>
-            <div className='flex justify-center items-center size-full'>
+            <div className='flex flex-col justify-center items-center size-full'>
                 <motion.div initial="offscreen" whileInView="onscreen" variants={motionVariants} viewport={{ once: true, amount: 0.8 }}
                     className='bg-white rounded-xl border-2 box-border overflow-hidden max-w-fit w-3/5 h-full block border-gray-500 drop-shadow-md shadow-lg shadow-gray-300'>
                     <img src={thebride} alt="" className='w-full h-auto p-2 rounded-xl' loading='lazy' />
                 </motion.div>
-            </div>
-            <div className='relative text-center mt-10'>
-                <h1 className='font-cormorantgaramond text-6xl'>MARIA</h1>
-                <div className='py-10 text-md font-semibold'>
-                    <p className='text-sm font-quicksand tracking-widest'>SON OF</p>
-                    <p className='italic font-cormorantgaramond py-5 px-5'>Mr.Ang Twan Hiong (+) & Mrs.Tjia An Hiang</p>
+                <div className='relative text-center mt-4 mb-10'>
+                    <h1 className='font-cormorantgaramond text-6xl'>MARIA</h1>
+                    <div className='py-4 text-md font-semibold'>
+                        <p className='text-sm font-quicksand tracking-widest'>SON OF</p>
+                        <p className='italic font-cormorantgaramond py-5 px-5'>Mr.Ang Twan Hiong (+) & Mrs.Tjia An Hiang</p>
+                    </div>
                 </div>
             </div>
             <div className='relative size-full'>

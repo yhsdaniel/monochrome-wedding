@@ -80,7 +80,7 @@ export default function RSVPSection({ userData }) {
     }, [])
 
     return (
-        <section className='h-full py-4 px-8 font-cormorantgaramond'>
+        <section className='h-full mb-10 py-4 px-8 font-cormorantgaramond'>
             <motion.h1
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
@@ -102,7 +102,7 @@ export default function RSVPSection({ userData }) {
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 1 }}
                 viewport={{ once: true }}
-                className='p-4 m-4 rounded-2xl'
+                className='p-2 mx-1 rounded-2xl'
             >
                 <form onSubmit={handleSubmit} className="max-w-sm mx-auto">
                     <div className="mb-4">
@@ -134,11 +134,11 @@ export default function RSVPSection({ userData }) {
                             <div className='my-8'>
                                 <div className='my-4'>
                                     <input type="checkbox" name="church" id="church" className='mr-2' value={formData.church} onChange={handleChange} />
-                                    <label htmlFor="church" className='text-2xl tracking-widest font-greatvibes'>Holy Matrimony</label>
+                                    <label htmlFor="church" className='text-2xl tracking-wide font-cormorantgaramond'>Holy Matrimony</label>
                                 </div>
                                 <div className='my-4'>
                                     <input type="checkbox" name="reception" id="reception" className='mr-2' value={formData.reception} onChange={handleChange} />
-                                    <label htmlFor="reception" className='text-2xl tracking-widest font-greatvibes'>Wedding Reception</label>
+                                    <label htmlFor="reception" className='text-2xl tracking-wide font-cormorantgaramond'>Wedding Reception</label>
                                 </div>
                             </div>
                             <div className='mb-4'>
@@ -158,7 +158,7 @@ export default function RSVPSection({ userData }) {
 
                 {/*========== Chat Section ========== */}
                 <div className='my-4 max-w-sm mx-auto bg-gray-50 rounded-xl'>
-                    <div className='max-h-72 overflow-y-auto overflow-x-auto border border-black/10 rounded-xl'>
+                    <div className='max-h-80 overflow-y-auto overflow-x-auto border-t border-b border-black/10'>
                         {dataAttendance?.map(value => (
                             <div key={value.id} className='p-2 flex text-lg text-black'>
                                 <div className='w-2/12 flex justify-center items-start'>

@@ -17,8 +17,8 @@ export default function ShareSection() {
     };
 
     return (
-        <section>
-            <div className='flex justify-center items-center size-full my-20'>
+        <section className='mb-20'>
+            <div className='flex justify-center items-center size-full my-10'>
                 <p className='font-quicksand tracking-widest text-sm font-bold'>SHARE THE DAY ON INSTAGRAM</p>
             </div>
             <div className='flex justify-center items-center size-full'>

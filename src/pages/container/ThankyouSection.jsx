@@ -4,8 +4,8 @@ import image1 from '../../assets/images/gallery/image1.jpg'
 
 export default function ThankyouSection() {
     return (
-        <section className='relative h-full text-center flex flex-col justify-start items-center'>
-            <div className='p-8 flex flex-col justify-center items-center font-cormorantgaramond'>
+        <section className='relative h-full text-center flex flex-col justify-start items-center mb-10 pb-10'>
+            <div className='px-8 py-4 flex flex-col justify-center items-center font-cormorantgaramond'>
                 <motion.h1
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}

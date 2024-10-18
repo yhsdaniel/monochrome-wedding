@@ -3,9 +3,11 @@ import { motion } from 'framer-motion'
 import { supabase } from '../../supabase'
 import toast from 'react-hot-toast'
 import GenerateAvatar from '../components/GenerateAvatar'
-import { useParams } from 'react-router-dom'
 
-export default function RSVPSection() {
+export default function RSVPSection({ userData }) {
+    const [isVisible, setIsVisible] = useState('true')
+    const [dataAttendance, setDataAttendance] = useState([])
+
     const [formData, setFormData] = useState({
         name: '',
         message: '',
@@ -14,30 +16,14 @@ export default function RSVPSection() {
         church: 'false',
         reception: 'false'
     })
-    const [isVisible, setIsVisible] = useState('true')
-    const [dataAttendance, setDataAttendance] = useState([])
 
-    const { username } = useParams()
-    const [userData, setUserData] = useState(null)
-    const fetchUserData = async () => {
-        const { data: user, error } = await supabase.from('bride').select('*').eq('username', username).single()
+    console.log(formData)
 
-        if (error) {
-            console.log(error)
-        } else {
-            setUserData(user)
-        }
-    }
-
-    async function getAllAttendance() {
+    async function getAttendance() {
         try {
-            fetchUserData()
-
-            if (!userData?.id) return;
-
-            const { data: user, error } = await supabase.from('attendance').select(`*`).eq('bride_id', userData?.id)
+            const { data: user, error } = await supabase.from('attendance').select(`*`).eq('bride_id', userData.id)
             setDataAttendance(user)
-            setFormData({ name: '', message: '', attendance: 'true', guest: '1', church: 'false', reception: 'false', bride_id: userData?.id })
+            setFormData({ name: '', message: '', attendance: 'true', guest: '1', church: 'false', reception: 'false', bride_id: userData.id })
             setIsVisible('true')
 
             if (error) throw error
@@ -61,7 +47,6 @@ export default function RSVPSection() {
             }))
         }
 
-
         if (name === 'attendance') {
             value === 'true' ? setIsVisible('true') : setIsVisible('false')
         }
@@ -74,9 +59,9 @@ export default function RSVPSection() {
                 name: formData.name,
                 message: formData.message,
                 attendance: formData.attendance,
-                guest: formData.guest,
-                church: formData.church,
-                reception: formData.reception,
+                guest: formData.attendance === 'false' ? '0' : formData.guest,
+                church: formData.attendance === 'false' ? 'false' : formData.church,
+                reception: formData.attendance === 'false' ? 'false' : formData.reception,
                 bride_id: userData.id
             })
             dataAttendance.push(user)
@@ -87,11 +72,11 @@ export default function RSVPSection() {
             console.log(error)
         }
 
-        getAllAttendance()
+        getAttendance()
     }
 
     useEffect(() => {
-        getAllAttendance()
+        getAttendance()
     }, [])
 
     return (
@@ -149,11 +134,11 @@ export default function RSVPSection() {
                             <div className='my-8'>
                                 <div className='my-4'>
                                     <input type="checkbox" name="church" id="church" className='mr-2' value={formData.church} onChange={handleChange} />
-                                    <label htmlFor="church" className='text-3xl tracking-widest font-darleston'>Holy Matrimony</label>
+                                    <label htmlFor="church" className='text-2xl tracking-widest font-greatvibes'>Holy Matrimony</label>
                                 </div>
                                 <div className='my-4'>
                                     <input type="checkbox" name="reception" id="reception" className='mr-2' value={formData.reception} onChange={handleChange} />
-                                    <label htmlFor="reception" className='text-3xl tracking-widest font-darleston'>Wedding Reception</label>
+                                    <label htmlFor="reception" className='text-2xl tracking-widest font-greatvibes'>Wedding Reception</label>
                                 </div>
                             </div>
                             <div className='mb-4'>

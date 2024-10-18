@@ -14,7 +14,8 @@ export default {
         dancing: ['dancing'],
         darleston: ['darleston'],
         gustatory: ['gustatory'],
-        cormorantgaramond: ['cormorantgaramond']
+        cormorantgaramond: ['cormorantgaramond'],
+        greatvibes: ['greatvibes'],
       },
     },
   },

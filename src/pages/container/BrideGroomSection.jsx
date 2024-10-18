@@ -35,7 +35,7 @@ export default function BrideGroomSection() {
                 <h1 className='font-cormorantgaramond text-6xl'>IVAN</h1>
                 <div className='py-10 text-md font-semibold'>
                     <p className='text-sm font-quicksand tracking-widest'>SON OF</p>
-                    <p className='italic font-cormorantgaramond py-5 px-5'>Mr.Johan Andrianto & Mrs.Heri FebruariNingsih</p>
+                    <p className='italic font-cormorantgaramond py-5 px-5'>Mr.Lo Swie Djiang & Mrs.Lie Pik Tjiam</p>
                 </div>
             </div>
             <div className='flex justify-center items-center size-full'>
@@ -48,20 +48,20 @@ export default function BrideGroomSection() {
                 <h1 className='font-cormorantgaramond text-6xl'>MARIA</h1>
                 <div className='py-10 text-md font-semibold'>
                     <p className='text-sm font-quicksand tracking-widest'>SON OF</p>
-                    <p className='italic font-cormorantgaramond py-5 px-5'>Mr.Mario & Mrs.Maria</p>
+                    <p className='italic font-cormorantgaramond py-5 px-5'>Mr.Ang Twan Hiong (+) & Mrs.Tjia An Hiang</p>
                 </div>
             </div>
             <div className='relative size-full'>
                 <motion.div initial="offscreen" whileInView="onscreen" variants={motionVariants} viewport={{ once: true, amount: 0.8 }}
-                    className='overflow-hidden max-w-fit'>
+                    className='overflow-hidden mx-8'>
                     <img src={thegroombride1} alt="" className='h-auto p-2 rounded-xl' loading='lazy' />
                 </motion.div>
                 <motion.div initial="offscreen" whileInView="onscreen" variants={motionVariants} viewport={{ once: true, amount: 0.8 }}
-                    className='rounded-xl overflow-hidden max-w-fit'>
+                    className='rounded-xl overflow-hidden mx-8'>
                     <img src={thegroombride2} alt="" className='h-auto p-2 rounded-xl' loading='lazy' />
                 </motion.div>
                 <motion.div initial="offscreen" whileInView="onscreen" variants={motionVariants} viewport={{ once: true, amount: 0.8 }}
-                    className='rounded-xl overflow-hidden max-w-fit'>
+                    className='rounded-xl overflow-hidden mx-8'>
                     <img src={thegroombride3} alt="" className='h-auto p-2 rounded-xl' loading='lazy' />
                 </motion.div>
             </div>

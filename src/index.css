@@ -8,6 +8,11 @@
 }
 
 @font-face {
+  font-family: "greatvibes";
+  src: local("GreatVibes-Regular"), url("./assets/fonts/GreatVibes-Regular.ttf");
+}
+
+@font-face {
   font-family: "dancing";
   src: local("Dancing-Script"), url("./assets/fonts/Dancing-Script.ttf");
 }

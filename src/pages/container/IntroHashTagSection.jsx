@@ -19,7 +19,7 @@ export default function IntroHashTagSection() {
             <div className='size-full'>
                 <motion.div initial="offscreen" whileInView="onscreen" variants={motionVariants} viewport={{ once: true, amount: 0.8 }}
                     className={`flex -z-20 m-auto justify-center items-center w-96 h-96 bg-contain bg-no-repeat bg-center bg-frame`}>
-                    <p className='text-lg font-quicksand tracking-widest'>#MARIAIVAN</p>
+                    <p className='text-lg font-quicksand tracking-widest'>#VANtasticMARiage</p>
                 </motion.div>
             </div>
         </section>

@@ -21,7 +21,7 @@ export default function TimeLocationSection() {
             </div>
             <div className='relative m-auto text-center size-full my-14'>
                 <h1 className='text-5xl font-darleston'>Holy Matrimony</h1>
-                <div className='overflow-hidden max-w-fit'>
+                <div className='overflow-hidden'>
                     <img src={ring} alt="" className='w-3/5 m-auto h-auto rounded-xl p-5' loading='lazy' />
                 </div>
                 <h1 className='text-2xl font-cormorantgaramond italic'>St. Andrew Kim Tae Gon</h1>

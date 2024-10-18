@@ -45,7 +45,7 @@ export default function MainPages() {
             <BrideGroomSection />
             <TimeLocationSection />
             <GallerySection />
-            <RSVPSection />
+            <RSVPSection userData={userData}/>
           </div>
         </div>
       </>

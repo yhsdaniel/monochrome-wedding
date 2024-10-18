@@ -17,8 +17,6 @@ export default function RSVPSection({ userData }) {
         reception: 'false'
     })
 
-    console.log(formData)
-
     async function getAttendance() {
         try {
             const { data: user, error } = await supabase.from('attendance').select(`*`).eq('bride_id', userData.id)

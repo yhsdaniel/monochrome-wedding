@@ -11,6 +11,7 @@ import Header from './components/header'
 import { useParams } from 'react-router-dom'
 import { supabase } from '../supabase'
 import ThankyouSection from './container/ThankyouSection'
+import music from '../upload/music.mp3'
 
 export default function MainPages() {
   const { username } = useParams()
@@ -46,7 +47,7 @@ export default function MainPages() {
             <BrideGroomSection />
             <TimeLocationSection />
             <GallerySection />
-            <RSVPSection userData={userData}/>
+            <RSVPSection userData={userData} />
             <ThankyouSection />
           </div>
         </div>

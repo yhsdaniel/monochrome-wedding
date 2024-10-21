@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import thegroombride3 from '../../assets/images/thegroombride-3.jpg'
+import thegroombride3 from '../../assets/images/gallery/landscape/image1.jpg'
 
 export default function ShareSection() {
     const motionVariants = {
@@ -17,7 +17,7 @@ export default function ShareSection() {
     };
 
     return (
-        <section className='mb-20'>
+        <section className='mb-28'>
             <div className='flex justify-center items-center size-full my-10'>
                 <p className='font-quicksand tracking-widest text-sm font-bold'>SHARE THE DAY ON INSTAGRAM</p>
             </div>

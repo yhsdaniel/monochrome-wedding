@@ -1,35 +1,35 @@
 import React, { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import potrait1 from '../../assets/images/gallery/image1.jpg'
-import potrait2 from '../../assets/images/gallery/thegroombride.jpg'
-import landscape1 from '../../assets/images/gallery/image2.jpg'
-import landscape2 from '../../assets/images/gallery/image3.jpg'
-import landscape3 from '../../assets/images/gallery/image4.jpg'
-import landscape4 from '../../assets/images/gallery/image5.jpg'
+import potrait1 from '../../assets/images/gallery/potrait/image1.jpg'
+import potrait2 from '../../assets/images/gallery/potrait/image2.jpg'
+import potrait3 from '../../assets/images/gallery/potrait/image3.jpg'
+import potrait4 from '../../assets/images/gallery/potrait/image4.jpg'
+import landscape1 from '../../assets/images/gallery/landscape/image1.jpg'
 
-const imagesSecondRow = [
-    {
-        image: landscape3,
-    },
-    {
-        image: landscape4,
-    },
-    {
-        image: potrait2,
-    },
-]
-
-const imageFirstRow = [
+const imageFirstColumn = [
     {
         image: potrait1
     },
     {
-        image: landscape1
+        image: potrait2
     },
     {
-        image: landscape2
+        image: landscape1
     },
 ]
+
+const imagesSecondColumn = [
+    {
+        image: landscape1,
+    },
+    {
+        image: potrait3,
+    },
+    {
+        image: potrait4,
+    },
+]
+
 
 const motionVariants = {
     offscreen: {
@@ -47,11 +47,11 @@ const motionVariants = {
 export default function GallerySection() {
     const [selectedImg, setSelectedImg] = useState(null)
     return (
-        <section className='h-full bg-black px-4 py-8 flex flex-col justify-center items-center'>
+        <section className='h-full bg-black px-4 py-8 mb-10 flex flex-col justify-center items-center'>
             <div className='image-grid'>
                 {/* First Column */}
                 <div className='image-grid-child'>
-                    {imageFirstRow.map((item, index) => (
+                    {imageFirstColumn.map((item, index) => (
                         <motion.div
                             key={index}
                             initial="offscreen"
@@ -74,7 +74,7 @@ export default function GallerySection() {
 
                 {/* Second Column */}
                 <div className='image-grid-child'>
-                    {imagesSecondRow.map((item, index) => (
+                    {imagesSecondColumn.map((item, index) => (
                         <motion.div
                             key={index}
                             initial={{ opacity: 0 }}

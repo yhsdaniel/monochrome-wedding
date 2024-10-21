@@ -12,6 +12,7 @@ import { useParams } from 'react-router-dom'
 import { supabase } from '../supabase'
 import ThankyouSection from './container/ThankyouSection'
 import music from '../upload/music.mp3'
+import GiftSection from './container/GiftSection'
 
 export default function MainPages() {
   const { username } = useParams()
@@ -47,6 +48,7 @@ export default function MainPages() {
             <BrideGroomSection />
             <TimeLocationSection />
             <GallerySection />
+            <GiftSection />
             <RSVPSection userData={userData} />
             <ThankyouSection />
           </div>

@@ -78,14 +78,14 @@ export default function RSVPSection({ userData }) {
     }, [])
 
     return (
-        <section className='h-full mb-10 py-4 px-8 font-cormorantgaramond'>
+        <section className='h-full py-4 px-6 font-cormorantgaramond'>
             <motion.h1
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 1 }}
                 className='text-2xl text-center my-4'
             >
-                Confirmation of Attendance
+                CONFIRMATION OF ATTENDANCE
             </motion.h1>
             <motion.h1
                 initial={{ opacity: 0 }}
@@ -102,7 +102,7 @@ export default function RSVPSection({ userData }) {
                 viewport={{ once: true }}
                 className='p-2 mx-1 rounded-2xl'
             >
-                <form onSubmit={handleSubmit} className="max-w-sm mx-auto">
+                <form onSubmit={handleSubmit} className="max-w-sm mb-20 mx-auto">
                     <div className="mb-4">
                         <label htmlFor="name" className="block mb-1 text-lg font-medium text-black">Full Name</label>
                         <input type="name" id="name" name='name' value={formData.name} className="border-b border-gray-300 text-black text-lg block w-full p-2 bg-transparent placeholder:text-black/50 focus-visible:border-none" placeholder="Name ..." onChange={handleChange} />
@@ -131,11 +131,11 @@ export default function RSVPSection({ userData }) {
                         >
                             <div className='my-8'>
                                 <div className='my-4'>
-                                    <input type="checkbox" name="church" id="church" className='mr-2' value={formData.church} onChange={handleChange} />
+                                    <input type="checkbox" name="church" id="church" value={formData.church} onChange={handleChange} />
                                     <label htmlFor="church" className='text-2xl tracking-wide font-cormorantgaramond'>Holy Matrimony</label>
                                 </div>
                                 <div className='my-4'>
-                                    <input type="checkbox" name="reception" id="reception" className='mr-2' value={formData.reception} onChange={handleChange} />
+                                    <input type="checkbox" name="reception" id="reception" value={formData.reception} onChange={handleChange} />
                                     <label htmlFor="reception" className='text-2xl tracking-wide font-cormorantgaramond'>Wedding Reception</label>
                                 </div>
                             </div>
@@ -155,16 +155,34 @@ export default function RSVPSection({ userData }) {
                 </form>
 
                 {/*========== Chat Section ========== */}
-                <div className='my-4 max-w-sm mx-auto bg-gray-50 rounded-xl'>
-                    <div className='max-h-80 overflow-y-auto overflow-x-auto border-t border-b border-black/10'>
+                <div className='rounded-xl'>
+                    <motion.h1
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ duration: 1 }}
+                        className='text-4xl text-center my-4 tracking-widest font-cormorantgaramond'
+                    >
+                        WELL WISHES
+                    </motion.h1>
+                    <motion.h1
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ duration: 1 }}
+                        className='text-2xl text-center my-4 tracking-widest font-greatvibes'
+                    >
+                        for groom and bride
+                    </motion.h1>
+                    <div className='max-h-96 overflow-y-auto overflow-x-auto my-10 scrollbar-custom'>
                         {dataAttendance?.map(value => (
-                            <div key={value.id} className='p-2 flex text-lg text-black'>
-                                <div className='w-2/12 flex justify-center items-start'>
-                                    <GenerateAvatar name={value.name} />
-                                </div>
-                                <div className='flex-1 py-2 px-4 bg-white rounded-lg shadow-black/20 shadow-md'>
-                                    <p className='font-bold text-lg my-1'>{value.name}</p>
-                                    <p className='text-lg break-words'>{value.message}</p>
+                            <div key={value.id} className='p-1 flex text-lg text-black'>
+                                <div className='w-full py-2 px-2 bg-white rounded-lg border border-black/30 flex'>
+                                    <div className='w-2/12 flex justify-center items-start'>
+                                        <GenerateAvatar name={value.name} />
+                                    </div>
+                                    <div className='w-10/12'>
+                                        <p className='font-bold text-lg'>{value.name}</p>
+                                        <p className='text-lg my-4 pr-4 break-words'>{value.message}</p>
+                                    </div>
                                 </div>
                             </div>
                         ))}

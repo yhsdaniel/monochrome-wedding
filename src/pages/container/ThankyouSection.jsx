@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import image1 from '../../assets/images/gallery/image1.jpg'
+import image1 from '../../assets/images/gallery/potrait/image1.jpg'
 
 export default function ThankyouSection() {
     return (

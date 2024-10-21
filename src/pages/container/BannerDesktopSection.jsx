@@ -1,5 +1,5 @@
 import React from 'react'
-import thegroombride from '../../assets/images/gallery/thegroombride.jpg'
+import thegroombride from '../../assets/images/gallery/potrait/thegroombride.jpg'
 import { motion } from 'framer-motion'
 
 export default function BannerDesktopSection() {
@@ -18,7 +18,7 @@ export default function BannerDesktopSection() {
                 whileInView={{ opacity: 1, translateX: 1 }}
                 transition={{ duration: 1 }}
                 viewport={{ once: true }}
-                className='text-4xl my-4 tracking-widest font-darleston'
+                className='text-4xl my-4 tracking-widest font-cormorantgaramond'
             >
                 Ivan & Maria
             </motion.p>

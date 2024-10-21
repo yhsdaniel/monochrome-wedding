@@ -1,4 +1,9 @@
 import React, { useEffect, useState } from 'react'
+import Header from './components/header'
+import { useParams } from 'react-router-dom'
+import { supabase } from '../supabase'
+import music from './upload/music.mp3'
+
 import BannerDesktopSection from './container/BannerDesktopSection'
 import BannerSection from './container/BannerSection'
 import IntroHashTagSection from './container/IntroHashTagSection'
@@ -7,11 +12,7 @@ import BrideGroomSection from './container/BrideGroomSection'
 import TimeLocationSection from './container/TimeLocationSection'
 import GallerySection from './container/GallerySection'
 import RSVPSection from './container/RSVPSection'
-import Header from './components/header'
-import { useParams } from 'react-router-dom'
-import { supabase } from '../supabase'
 import ThankyouSection from './container/ThankyouSection'
-import music from '../upload/music.mp3'
 import GiftSection from './container/GiftSection'
 
 export default function MainPages() {
@@ -34,6 +35,9 @@ export default function MainPages() {
   if (userData) {
     return (
       <>
+        <audio autoPlay='true'>
+          <source src={music} type="audio/mp3" />
+        </audio>
         <div div className='flex relative overflow-x-hidden'>
           <div className='h-screen hidden sm:block md:w-7/12 lg:w-8/12 relative'>
             <BannerDesktopSection />

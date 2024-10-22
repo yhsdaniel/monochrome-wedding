@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Header from './components/header'
 import { useParams } from 'react-router-dom'
 import { supabase } from '../supabase'
-import music from './upload/music.mp3'
+import music from '../assets/upload/music.mp3'
 
 import BannerDesktopSection from './container/BannerDesktopSection'
 import BannerSection from './container/BannerSection'
@@ -27,37 +27,37 @@ export default function MainPages() {
       setUserData(user)
     }
   }
+  
+  const audioMusic = useRef(null)
+  console.log(audioMusic.current)
 
   useEffect(() => {
     fetchUserData()
+    audioMusic.current ? audioMusic.current.play() : null
   }, [])
 
   if (userData) {
     return (
-      <>
-        <audio autoPlay='true'>
-          <source src={music} type="audio/mp3" />
-        </audio>
-        <div div className='flex relative overflow-x-hidden'>
-          <div className='h-screen hidden sm:block md:w-7/12 lg:w-8/12 relative'>
-            <BannerDesktopSection />
-          </div>
-          <div className='container size-full md:w-5/12 lg:w-4/12 relative'>
-            <section>
-              <Header menu={true} logo='I & M' />
-            </section>
-            <BannerSection />
-            <IntroHashTagSection />
-            <ShareSection />
-            <BrideGroomSection />
-            <TimeLocationSection />
-            <GallerySection />
-            <GiftSection />
-            <RSVPSection userData={userData} />
-            <ThankyouSection />
-          </div>
+      <div div className='flex relative overflow-x-hidden'>
+        <audio ref={audioMusic} src={music} autoPlay preload='auto'></audio>
+        <div className='h-screen hidden sm:block md:w-7/12 lg:w-8/12 relative'>
+          <BannerDesktopSection />
         </div>
-      </>
+        <div className='container size-full md:w-5/12 lg:w-4/12 relative'>
+          <section>
+            <Header menu={true} logo='I & M' />
+          </section>
+          <BannerSection />
+          <IntroHashTagSection />
+          <ShareSection />
+          <BrideGroomSection />
+          <TimeLocationSection />
+          <GallerySection />
+          <GiftSection />
+          <RSVPSection userData={userData} />
+          <ThankyouSection />
+        </div>
+      </div>
     )
   }
 }

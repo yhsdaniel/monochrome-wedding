@@ -13,7 +13,7 @@ export default {
         }
       },
       animation: {
-        scrollTop: 'scrollTop 1.5s linear forwards'
+        scrollTop: 'scrollTop 1.2s linear forwards'
       },
       backgroundImage: {
         'frame': "url('/src/assets/images/flowerframe.jpg')",

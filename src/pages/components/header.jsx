@@ -8,9 +8,9 @@ const Header = ({menu=false, logo=''}) => {
             {
                 logo ? <p className='text-xl'>{logo}</p> : null
             }
-            {/* {
+            {
                 menu ? <IoIosMenu size={30}/> : null
-            } */}
+            }
         </div>
     </div>
   )

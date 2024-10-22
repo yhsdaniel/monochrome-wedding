@@ -66,7 +66,7 @@ export default function MainPages() {
           </div>
           <div className='container size-full md:w-5/12 lg:w-4/12 relative'>
             <button onClick={togglePlayPause} className='fixed right-0 bottom-20 m-1 p-2 z-[100] border-4 border-black/70 rounded-full bg-white'>
-              {isPlaying ? <FaMicrophoneSlash /> : <FaMicrophone />}
+              {!isPlaying ? <FaMicrophoneSlash /> : <FaMicrophone />}
             </button>
             <section>
               <Header menu={false} logo='I & M' />

@@ -36,7 +36,7 @@ export default function OpeningCover({ onClose, animationScroll }) {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1, delay: 1.2 }}
-                    className='py-2 px-4 bg-white shadow-shadowForButton text-black rounded-xl duration-150 ease-in-out'
+                    className='py-2 px-4 bg-white hover:shadow-shadowHover text-black rounded-xl duration-200 ease-in-out'
                     onClick={onClose}
                 >
                     Open Invitation

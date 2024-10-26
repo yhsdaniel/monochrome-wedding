@@ -20,7 +20,7 @@ export default function BannerDesktopSection() {
                 viewport={{ once: true }}
                 className='text-4xl my-4 tracking-widest font-cormorantgaramond'
             >
-                Ivan & Maria
+                IVAN & MARIA
             </motion.p>
             <motion.p
                 initial={{ opacity: 0, translateX: 100 }}

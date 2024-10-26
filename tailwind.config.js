@@ -19,7 +19,8 @@ export default {
         'frame': "url('/src/assets/images/flowerframe.jpg')",
       },
       boxShadow: {
-        shadowForButton: '-3px -2px 8px #2b2b2b96 inset;'
+        shadowForButton: '-3px -2px 8px #2b2b2b96 inset',
+        shadowHover: '0px 0px 24px #fff'
       },
       fontFamily: {
         quicksand: ['quicksand'],

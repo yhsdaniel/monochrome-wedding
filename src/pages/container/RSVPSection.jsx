@@ -3,10 +3,12 @@ import { motion } from 'framer-motion'
 import { supabase } from '../../supabase'
 import toast from 'react-hot-toast'
 import GenerateAvatar from '../components/GenerateAvatar'
+import { MotionDiv, MotionH1 } from '../components/ui/MotionOpacity'
 
 export default function RSVPSection({ userData }) {
     const [isVisible, setIsVisible] = useState('true')
-    const [dataAttendance, setDataAttendance] = useState([])
+    const [dataAttendance, setDataAttendance] = useState(null)
+    console.log(dataAttendance)
 
     const [formData, setFormData] = useState({
         name: '',
@@ -17,12 +19,23 @@ export default function RSVPSection({ userData }) {
         reception: 'false'
     })
 
-    async function getAttendance() {
+    const handleReset = () => {
+        setFormData({
+            name: '',
+            message: '',
+            attendance: 'true',
+            guest: '1',
+            church: 'false',
+            reception: 'false'
+        })
+    }
+
+    const getAttendance = async () => {
         try {
-            const { data: user, error } = await supabase.from('attendance').select(`*`).eq('bride_id', userData.id)
-            setDataAttendance(user)
-            setFormData({ name: '', message: '', attendance: 'true', guest: '1', church: 'false', reception: 'false', bride_id: userData.id })
+            const { data: list, error } = await supabase.from('attendance').select(`*`).eq('bride_id', userData.id)
+            setDataAttendance(list)
             setIsVisible('true')
+            handleReset()
 
             if (error) throw error
         } catch (error) {
@@ -63,14 +76,13 @@ export default function RSVPSection({ userData }) {
                 bride_id: userData.id
             })
             dataAttendance.push(user)
+            getAttendance()
             toast.success('Thank you for your prayers')
 
             if (error) throw error
         } catch (error) {
             console.log(error)
         }
-
-        getAttendance()
     }
 
     useEffect(() => {
@@ -79,22 +91,12 @@ export default function RSVPSection({ userData }) {
 
     return (
         <section className='h-full py-4 px-6 font-cormorantgaramond'>
-            <motion.h1
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 1 }}
-                className='text-2xl text-center my-4'
-            >
+            <MotionH1 className='text-2xl text-center my-4'>
                 CONFIRMATION OF ATTENDANCE
-            </motion.h1>
-            <motion.h1
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 1 }}
-                className='text-2xl text-center my-4 tracking-wider font-greatvibes'
-            >
+            </MotionH1>
+            <MotionH1 className='text-2xl text-center my-4 tracking-wider font-greatvibes'>
                 See you there!
-            </motion.h1>
+            </MotionH1>
             <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
@@ -103,15 +105,15 @@ export default function RSVPSection({ userData }) {
                 className='p-2 mx-1 rounded-2xl'
             >
                 <form onSubmit={handleSubmit} className="max-w-sm mb-20 mx-auto">
-                    <div className="mb-4">
+                    <MotionDiv className="mb-4">
                         <label htmlFor="name" className="block mb-1 text-lg font-medium text-black">Full Name</label>
                         <input type="name" id="name" name='name' value={formData.name} className="border-b border-gray-300 text-black text-lg block w-full p-2 bg-transparent placeholder:text-black/50 focus-visible:border-none" placeholder="Name ..." onChange={handleChange} />
-                    </div>
-                    <div className='mb-4'>
+                    </MotionDiv>
+                    <MotionDiv className="mb-4">
                         <label htmlFor="message" className="block mb-1 text-lg font-medium text-black">Message:</label>
                         <textarea id="message" name='message' rows="4" value={formData.message} className="border border-gray-300 text-black text-lg rounded-lg block w-full p-2 bg-transparent placeholder:text-black/50" placeholder="Message..." onChange={handleChange}></textarea>
-                    </div>
-                    <div className='mb-4'>
+                    </MotionDiv>
+                    <MotionDiv className="mb-4">
                         <label className="block text-lg font-medium text-black">Confirmation of Attendance</label>
                         <div className="toggle">
                             <input type="radio" name="attendance" value={'true'} id="attedance" onChange={handleChange} checked={formData.attendance === 'true'} />
@@ -119,7 +121,7 @@ export default function RSVPSection({ userData }) {
                             <input type="radio" name="attendance" value={'false'} id="notattendance" onChange={handleChange} checked={formData.attendance === 'false'} />
                             <label htmlFor="notattendance">Tidak Hadir</label>
                         </div>
-                    </div>
+                    </MotionDiv>
 
                     {/* IF CHOOSE ATTEDANCE, THIS SECTION WILL BE DISPLAY */}
                     {isVisible === 'true' ? (
@@ -132,11 +134,11 @@ export default function RSVPSection({ userData }) {
                             <div className='my-8'>
                                 <div className='my-4'>
                                     <input type="checkbox" name="church" id="church" value={formData.church} onChange={handleChange} />
-                                    <label htmlFor="church" className='text-2xl tracking-wide font-cormorantgaramond'>Holy Matrimony</label>
+                                    <label htmlFor="church" className={`${formData.church === 'false' ? 'no-after text-2xl tracking-wide font-cormorantgaramond' : 'text-2xl tracking-wide font-cormorantgaramond'}`}>Holy Matrimony</label>
                                 </div>
                                 <div className='my-4'>
                                     <input type="checkbox" name="reception" id="reception" value={formData.reception} onChange={handleChange} />
-                                    <label htmlFor="reception" className='text-2xl tracking-wide font-cormorantgaramond'>Wedding Reception</label>
+                                    <label htmlFor="reception" className={`${formData.reception === 'false' ? 'no-after text-2xl tracking-wide font-cormorantgaramond' : 'text-2xl tracking-wide font-cormorantgaramond'}`}>Wedding Reception</label>
                                 </div>
                             </div>
                             <div className='mb-4'>
@@ -149,32 +151,22 @@ export default function RSVPSection({ userData }) {
                         </motion.div>
                     ) : null}
 
-                    <div className='my-8 mx-[25%]'>
-                        <button type="submit" className="text-white hover:text-black bg-[#2b2b2b] hover:bg-white border border-black/40 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-lg w-full px-6 py-2 text-center duration-150 ease-in-out" onClick={handleSubmit}>Submit</button>
-                    </div>
+                    <MotionDiv className='my-8 mx-[25%]'>
+                        <button type="submit" className="text-white hover:text-black bg-[#363636] hover:bg-white border border-black/40 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-lg w-full px-6 py-2 text-center duration-150 ease-in-out" onClick={handleSubmit}>Submit</button>
+                    </MotionDiv>
                 </form>
 
                 {/*========== Chat Section ========== */}
                 <div className='rounded-xl'>
-                    <motion.h1
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        transition={{ duration: 1 }}
-                        className='text-4xl text-center my-4 tracking-widest font-cormorantgaramond'
-                    >
+                    <MotionH1 className='text-4xl text-center my-4 tracking-widest font-cormorantgaramond'>
                         WELL WISHES
-                    </motion.h1>
-                    <motion.h1
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        transition={{ duration: 1 }}
-                        className='text-2xl text-center my-4 tracking-widest font-greatvibes'
-                    >
+                    </MotionH1>
+                    <MotionH1 className='text-2xl text-center my-4 tracking-widest font-greatvibes'>
                         for groom and bride
-                    </motion.h1>
+                    </MotionH1>
                     <div className='max-h-96 overflow-y-auto overflow-x-auto my-10 scrollbar-custom'>
                         {dataAttendance?.map(value => (
-                            <div key={value.id} className='p-1 flex text-lg text-black'>
+                            <MotionDiv key={value.id} className='p-1 flex text-lg text-black'>
                                 <div className='w-full py-2 px-2 bg-white rounded-lg border border-black/30 flex'>
                                     <div className='w-2/12 flex justify-center items-start'>
                                         <GenerateAvatar name={value.name} />
@@ -184,7 +176,7 @@ export default function RSVPSection({ userData }) {
                                         <p className='text-lg my-4 pr-4 break-words'>{value.message}</p>
                                     </div>
                                 </div>
-                            </div>
+                            </MotionDiv>
                         ))}
                     </div>
                 </div>

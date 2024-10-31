@@ -3,10 +3,8 @@ import { motion } from 'framer-motion'
 import MuiAccordion from '@mui/material/Accordion';
 import MuiAccordionSummary from '@mui/material/AccordionSummary';
 import MuiAccordionDetails from '@mui/material/AccordionDetails';
-import ExpandMoreSharpIcon from '@mui/icons-material/ExpandMoreSharp';
-import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
 import { styled } from '@mui/material/styles';
-import bca from '../../assets/images/BCA.png'
+import bca from '../../../public/images/BCA.png'
 import Clipboard from '../components/ui/Clipboard';
 
 const Accordion = styled((props) => (

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import data from '../../dataGroomBride.json'
-import thegroombride3 from '../../assets/images/moment/image-for-quotes.jpg'
+import thegroombride3 from '../../../public/images/moment/image-for-quotes.jpg'
 
 export default function ShareSection() {
     const motionVariants = {

@@ -2,7 +2,7 @@ import React from 'react'
 import data from '../../dataGroomBride.json'
 import Banner from '../components/Banner'
 import { motion } from 'framer-motion'
-import thegroombride from '../../assets/images/thegroombride.jpg'
+import thegroombride from '../../../public/images/thegroombride.jpg'
 
 export default function BannerSection() {
     const motionVariants = {

@@ -1,7 +1,7 @@
 import React from 'react'
 import data from '../dataGroomBride.json'
 import { motion } from 'framer-motion'
-import cover from '../assets/images/cover.jpg'
+import cover from '../../public/images/cover.jpg'
 
 export default function OpeningCover({ onClose, animationScroll }) {
     return (

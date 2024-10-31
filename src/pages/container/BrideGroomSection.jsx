@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import data from '../../dataGroomBride.json'
 import { AnimatePresence, motion } from 'framer-motion'
-import thegroom from '../../assets/images/thegroom.jpg'
-import thebride from '../../assets/images/thebride.jpg'
-import thegroombride1 from '../../assets/images/moment/image1.jpg'
-import thegroombride2 from '../../assets/images/moment/potrait.jpg'
-import thegroombride3 from '../../assets/images/moment/image3.jpg'
+import thegroom from '../../../public/images/thegroom.jpg'
+import thebride from '../../../public/images/thebride.jpg'
+import thegroombride1 from '../../../public/images/moment/image1.jpg'
+import thegroombride2 from '../../../public/images/moment/potrait.jpg'
+import thegroombride3 from '../../../public/images/moment/image3.jpg'
 import { MotionA, MotionDiv, MotionH1 } from '../components/ui/MotionOpacity'
 
 const motionVariants = {

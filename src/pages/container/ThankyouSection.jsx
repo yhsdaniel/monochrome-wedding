@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import data from '../../dataGroomBride.json'
 import { AnimatePresence, motion } from 'framer-motion'
-import image1 from '../../assets/images/thankyou-groombride.jpg'
+import image1 from '../../../public/images/thankyou-groombride.jpg'
 import { MotionH1, MotionP } from '../components/ui/MotionOpacity'
 
 export default function ThankyouSection() {

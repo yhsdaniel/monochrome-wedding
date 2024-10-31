@@ -1,6 +1,6 @@
 import React from 'react'
 import data from '../../dataGroomBride.json'
-import thegroombride from '../../assets/images/thegroombride.jpg'
+import thegroombride from '../../../public/images/thegroombride.jpg'
 import { motion } from 'framer-motion'
 
 export default function BannerDesktopSection() {

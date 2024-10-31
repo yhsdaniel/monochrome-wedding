@@ -5,6 +5,7 @@ import potrait2 from '../../assets/images/gallery/potrait/image2.jpg'
 import potrait3 from '../../assets/images/gallery/potrait/image3.jpg'
 import potrait4 from '../../assets/images/gallery/potrait/image4.jpg'
 import landscape1 from '../../assets/images/gallery/landscape/image1.jpg'
+import landscape2 from '../../assets/images/gallery/landscape/image2.jpg'
 
 const imageFirstColumn = [
     {
@@ -20,7 +21,7 @@ const imageFirstColumn = [
 
 const imagesSecondColumn = [
     {
-        image: landscape1,
+        image: landscape2,
     },
     {
         image: potrait3,

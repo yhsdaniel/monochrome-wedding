@@ -1,5 +1,5 @@
 import React from 'react'
-import thegroombride from '../../assets/images/gallery/potrait/thegroombride.jpg'
+import thegroombride from '../../assets/images/thegroombride.jpg'
 import { motion } from 'framer-motion'
 
 export default function BannerDesktopSection() {

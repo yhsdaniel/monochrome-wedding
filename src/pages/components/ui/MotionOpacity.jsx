@@ -39,3 +39,17 @@ export const  MotionDiv = ({ children, className }) => {
         </motion.div>
     )
 }
+
+export const MotionA = ({ children, href, className }) => {
+    return (
+        <motion.a
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+            href={href}
+            className={className}
+        >
+            {children}
+        </motion.a>
+    )
+}

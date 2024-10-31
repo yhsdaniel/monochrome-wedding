@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import thegroombride from '../assets/images/gallery/potrait/thegroombride.jpg'
+import thegroombride from '../assets/images/thegroombride.jpg'
 
 export default function OpeningCover({ onClose, animationScroll }) {
     return (

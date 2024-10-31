@@ -15,6 +15,7 @@ const Accordion = styled((props) => (
     border: `1px solid rgba(0, 0, 0, .3)`,
     backgroundColor: 'transparent',
     borderRadius: '10px',
+    boxShadow: '-3px -2px 8px #85858596 inset',
     color: 'rgba(0, 0, 0, .7)',
     '&::before': {
         display: 'none',
@@ -23,7 +24,6 @@ const Accordion = styled((props) => (
 
 const AccordionSummary = styled((props) => (
     <MuiAccordionSummary
-        expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: '0.9rem' }} />}
         {...props}
     />
 ))(({ theme }) => ({
@@ -32,7 +32,10 @@ const AccordionSummary = styled((props) => (
         transform: 'rotate(-90deg)',
     },
     '& .MuiAccordionSummary-content': {
-        marginLeft: theme.spacing(1),
+        // marginLeft: theme.spacing(1),
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
     },
     ...theme.applyStyles('dark', {
         backgroundColor: 'transparent',
@@ -71,11 +74,10 @@ export default function GiftSection() {
                     >
                         <Accordion>
                             <AccordionSummary
-                                expandIcon={<ExpandMoreSharpIcon />}
                                 aria-controls='panel1-content'
                                 id="panel1-header"
                             >
-                                Send Gift
+                                SEND GIFT
                             </AccordionSummary>
                             <AccordionDetails>
                                 <div className='text-center flex flex-col justify-center items-center'>

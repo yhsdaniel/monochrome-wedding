@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import data from '../../dataGroomBride.json'
 import { AnimatePresence, motion } from 'framer-motion'
 import image1 from '../../assets/images/thankyou-groombride.jpg'
 import { MotionH1, MotionP } from '../components/ui/MotionOpacity'
@@ -25,7 +26,7 @@ export default function ThankyouSection() {
                     onClick={() => setSelectedImg(image1)}
                 >
                     <img src={image1} alt="Thanks Image" className='size-full object-cover rounded-lg' />
-                    <p className='text-xl tracking-widest text-black font-dancing'>Ivan & Maria</p>
+                    <p className='text-xl tracking-widest text-black font-dancing'>{data.men.name} & {data.women.name}</p>
                 </motion.div>
             </div>
             <AnimatePresence>

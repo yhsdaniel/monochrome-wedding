@@ -1,0 +1,34 @@
+{
+    "men": {
+        "name": "Ivan",
+        "fullname": "Ivan",
+        "instagram": "st.iphan",
+        "linkinstagram": "https://www.instagram.com/st.iphan/",
+        "father": "Lo Swie Djiang",
+        "mother": "Lie Pik Tjiam",
+        "bankname": "BCA",
+        "nobank": "0650731816"
+    },
+    "women": {
+        "name": "Maria",
+        "fullname": "Maria sulistiowati",
+        "instagram": "angmariaa_",
+        "linkinstagram": "https://www.instagram.com/angmariaa_/",
+        "father": "Ang Twan Hiong",
+        "mother": "Tjia An Hiang",
+        "bankname": "BCA",
+        "nobank": "0373586908"
+    },
+    "date": "Saturday, 7 December 2024",
+    "church": {
+        "name": "St. Andrew Kim Tae Gon",
+        "time": "14.00",
+        "googlemaps": "https://www.google.com/maps/place/St.+Andrew+Kim+Tae+Gon+Catholic+Church/@-6.1737434,106.9133891,17z/data=!3m1!4b1!4m6!3m5!1s0x2e698b2a887d4349:0xf63bd51233940aba!8m2!3d-6.1737487!4d106.915964!16s%2Fg%2F119pg1_8s?entry=ttu&g_ep=EgoyMDI0MTAwOS4wIKXMDSoASAFQAw%3D%3D"
+    },
+    "receptions": {
+        "name": "Arlyda Grand Ballroom (Cabin Hotel)",
+        "time": "19.00",
+        "googlemaps": "https://www.google.com/maps/place/Arlyda+Grand+Ballroom/@-6.147714,106.888332,15z/data=!4m6!3m5!1s0x2e69f560cefa445b:0x85db8bd1d2dfe19d!8m2!3d-6.147714!4d106.888332!16s%2Fg%2F11rfblf7jn?entry=ttu&g_ep=EgoyMDI0MTAyNy4wIKXMDSoASAFQAw%3D%3D"
+    },
+    "quotes": "Someone once told me there's a path for everyone..and my path leads me to you"
+}

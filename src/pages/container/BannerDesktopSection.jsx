@@ -1,4 +1,5 @@
 import React from 'react'
+import data from '../../dataGroomBride.json'
 import thegroombride from '../../assets/images/thegroombride.jpg'
 import { motion } from 'framer-motion'
 
@@ -18,9 +19,9 @@ export default function BannerDesktopSection() {
                 whileInView={{ opacity: 1, translateX: 1 }}
                 transition={{ duration: 1 }}
                 viewport={{ once: true }}
-                className='text-4xl my-4 tracking-widest font-cormorantgaramond'
+                className='text-4xl my-4 uppercase tracking-widest font-cormorantgaramond'
             >
-                IVAN & MARIA
+                {`${data.men.name} & ${data.women.name}`}
             </motion.p>
             <motion.p
                 initial={{ opacity: 0, translateX: 100 }}
@@ -28,7 +29,7 @@ export default function BannerDesktopSection() {
                 transition={{ duration: 1 }}
                 viewport={{ once: true }}
             >
-                Saturday, 7 December 2024
+                {data.date}
             </motion.p>
         </div>
     )

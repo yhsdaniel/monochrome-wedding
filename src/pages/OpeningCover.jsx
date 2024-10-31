@@ -1,4 +1,5 @@
 import React from 'react'
+import data from '../dataGroomBride.json'
 import { motion } from 'framer-motion'
 import cover from '../assets/images/cover.jpg'
 
@@ -12,8 +13,8 @@ export default function OpeningCover({ onClose, animationScroll }) {
                     transition={{ duration: 1, delay: 0.3 }}
                 >
                     <p>THE WEDDING OF</p>
-                    <h1 className='text-4xl my-4 tracking-wider font-cormorantgaramond'>
-                        IVAN & MARIA
+                    <h1 className='text-4xl my-4 uppercase tracking-wider font-cormorantgaramond'>
+                        {data.men.name} & {data.women.name}
                     </h1>
                 </motion.div>
                 <motion.p
@@ -30,7 +31,7 @@ export default function OpeningCover({ onClose, animationScroll }) {
                     transition={{ duration: 1, delay: 0.9 }}
                     className='my-10 text-lg'
                 >
-                    Saturday, 7 December 2024
+                    {data.date}
                 </motion.p>
                 <motion.button
                     initial={{ opacity: 0 }}

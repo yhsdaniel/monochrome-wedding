@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
+import data from '../../dataGroomBride.json'
 import thegroombride3 from '../../assets/images/moment/image-for-quotes.jpg'
 
 export default function ShareSection() {
@@ -22,7 +23,7 @@ export default function ShareSection() {
         <section className='mb-28'>
             <div className='flex justify-center items-center size-full my-10 md:px-6'>
                 <p className='font-quicksand tracking-widest text-sm text-center italic font-bold'>
-                    "Someone once told me there's a path for everyone..and my path leads me to you"
+                    {`"${data.quotes}"`}
                 </p>
             </div>
             <div className='flex justify-center items-center size-full'>

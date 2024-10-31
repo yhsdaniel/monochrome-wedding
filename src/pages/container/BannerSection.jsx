@@ -1,4 +1,5 @@
 import React from 'react'
+import data from '../../dataGroomBride.json'
 import Banner from '../components/Banner'
 import { motion } from 'framer-motion'
 import thegroombride from '../../assets/images/thegroombride.jpg'
@@ -24,12 +25,12 @@ export default function BannerSection() {
                     <div className='font-quicksand tracking-[0.5em]'>
                         <p>THE WEDDING OF</p>
                     </div>
-                    <div className='text-5xl tracking-widest font-cormorantgaramond'>
-                        <h1>IVAN</h1>
-                        <h1>MARIA</h1>
+                    <div className='text-5xl uppercase tracking-widest font-cormorantgaramond'>
+                        <h1>{data.men.name}</h1>
+                        <h1>{data.women.name}</h1>
                     </div>
                     <div className='font-dancing text-xl'>
-                        <p>Saturday, 7 December 2024</p>
+                        <p>{data.date}</p>
                     </div>
                 </motion.div>
             </Banner>

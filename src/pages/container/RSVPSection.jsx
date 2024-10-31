@@ -125,9 +125,9 @@ export default function RSVPSection({ userData }) {
                     {/* IF CHOOSE ATTEDANCE, THIS SECTION WILL BE DISPLAY */}
                     {isVisible === 'true' ? (
                         <motion.div
-                            initial={{ opacity: 0, translateY: -100 }}
+                            initial={{ opacity: 0, translateY: -50 }}
                             animate={{ opacity: 1, translateY: 1 }}
-                            transition={{ duration: .5 }}
+                            transition={{ duration: 1 }}
                             viewport={{ once: true }}
                         >
                             <div className='my-8'>

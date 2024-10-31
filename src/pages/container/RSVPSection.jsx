@@ -8,7 +8,6 @@ import { MotionDiv, MotionH1 } from '../components/ui/MotionOpacity'
 export default function RSVPSection({ userData }) {
     const [isVisible, setIsVisible] = useState('true')
     const [dataAttendance, setDataAttendance] = useState(null)
-    console.log(dataAttendance)
 
     const [formData, setFormData] = useState({
         name: '',

@@ -1,10 +1,10 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import thegroombride from '../assets/images/thegroombride.jpg'
+import cover from '../assets/images/cover.jpg'
 
 export default function OpeningCover({ onClose, animationScroll }) {
     return (
-        <section className={`${animationScroll} h-screen w-full fixed z-[200] bg-black/40 bg-cover bg-center bg-no-repeat bg-blend-multiply text-white flex flex-col justify-center items-center text-center`} style={{ backgroundImage: `url(${thegroombride})` }}>
+        <section className={`${animationScroll} h-screen w-full fixed z-[200] bg-black/60 bg-cover bg-center bg-no-repeat bg-blend-multiply text-white flex flex-col justify-center items-center text-center`} style={{ backgroundImage: `url(${cover})` }}>
             <div className='mx-[10%] my-auto'>
                 <motion.div
                     initial={{ opacity: 0 }}

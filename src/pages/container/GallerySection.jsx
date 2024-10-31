@@ -4,6 +4,8 @@ import potrait1 from '../../assets/images/gallery/potrait/image1.jpg'
 import potrait2 from '../../assets/images/gallery/potrait/image2.jpg'
 import potrait3 from '../../assets/images/gallery/potrait/image3.jpg'
 import potrait4 from '../../assets/images/gallery/potrait/image4.jpg'
+import potrait5 from '../../assets/images/gallery/potrait/image5.jpg'
+import potrait6 from '../../assets/images/gallery/potrait/image6.jpg'
 import landscape1 from '../../assets/images/gallery/landscape/image1.jpg'
 import landscape2 from '../../assets/images/gallery/landscape/image2.jpg'
 
@@ -17,6 +19,9 @@ const imageFirstColumn = [
     {
         image: landscape1
     },
+    {
+        image: potrait5
+    },
 ]
 
 const imagesSecondColumn = [
@@ -28,6 +33,9 @@ const imagesSecondColumn = [
     },
     {
         image: potrait4,
+    },
+    {
+        image: potrait6,
     },
 ]
 

@@ -47,6 +47,7 @@ export const MotionA = ({ children, href, className }) => {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1 }}
             href={href}
+            target="_blank"
             className={className}
         >
             {children}

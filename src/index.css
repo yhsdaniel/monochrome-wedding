@@ -39,9 +39,15 @@ body {
   background-color: #fff;
 }
 
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: #fff !important;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: #fff;
+    background-color: #fff !important;
   }
 }
 

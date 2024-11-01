@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import potrait1 from '../../../public/images/gallery/potrait/image1.jpg'
-import potrait2 from '../../../public/images/gallery/potrait/image2.jpg'
-import potrait3 from '../../../public/images/gallery/potrait/image3.jpg'
-import potrait4 from '../../../public/images/gallery/potrait/image4.jpg'
-import potrait5 from '../../../public/images/gallery/potrait/image5.jpg'
-import potrait6 from '../../../public/images/gallery/potrait/image6.jpg'
-import landscape1 from '../../../public/images/gallery/landscape/image1.jpg'
-import landscape2 from '../../../public/images/gallery/landscape/image2.jpg'
+import potrait1 from '/images/gallery/potrait/image1.jpg'
+import potrait2 from '/images/gallery/potrait/image2.jpg'
+import potrait3 from '/images/gallery/potrait/image3.jpg'
+import potrait4 from '/images/gallery/potrait/image4.jpg'
+import potrait5 from '/images/gallery/potrait/image5.jpg'
+import potrait6 from '/images/gallery/potrait/image6.jpg'
+import landscape1 from '/images/gallery/landscape/image1.jpg'
+import landscape2 from '/images/gallery/landscape/image2.jpg'
 
 const imageFirstColumn = [
     {

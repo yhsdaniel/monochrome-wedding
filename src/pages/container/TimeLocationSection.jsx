@@ -1,7 +1,7 @@
 import React from 'react'
 import data from '../../dataGroomBride.json'
-import ring from '../../../public/images/ring.png'
-import dinner from '../../../public/images/dinner.png'
+import ring from '/images/ring.png'
+import dinner from '/images/dinner.png'
 
 export default function TimeLocationSection() {
     return (

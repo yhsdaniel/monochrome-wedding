@@ -1,7 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Header from './components/header'
-import { useParams } from 'react-router-dom'
-import { supabase } from '../supabase'
 import { FaMicrophone, FaMicrophoneSlash } from "react-icons/fa";
 import music from '../assets/upload/Can You Feel The Love Tonight (The Lion King) - Elton John (Boyce Avenue ft. Connie Talbot cover).mp3'
 

@@ -16,7 +16,7 @@ export default {
         scrollTop: 'scrollTop 1.2s linear forwards'
       },
       backgroundImage: {
-        'frame': "url('../../public/images/flowerframe.jpg')",
+        'frame': "url('/images/flowerframe.jpg')",
       },
       boxShadow: {
         shadowForButton: '-3px -2px 8px #85858596 inset',

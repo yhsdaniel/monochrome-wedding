@@ -86,10 +86,10 @@ export default function GallerySection() {
                     {imagesSecondColumn.map((item, index) => (
                         <motion.div
                             key={index}
-                            initial={{ opacity: 0 }}
-                            whileInView={{ opacity: 1 }}
+                            initial="offscreen"
+                            whileInView="onscreen"
+                            variants={motionVariants}
                             viewport={{ once: true }}
-                            transition={{ duration: 1, delay: 0.3 }}
                             onClick={() => setSelectedImg(item.image)}
                         >
                             <img

@@ -14,6 +14,7 @@ const Accordion = styled((props) => (
     backgroundColor: 'transparent',
     borderRadius: '10px',
     boxShadow: '-3px -2px 8px #85858596 inset',
+    width: '95%',
     color: 'rgba(0, 0, 0, .7)',
     '&::before': {
         display: 'none',
@@ -34,6 +35,7 @@ const AccordionSummary = styled((props) => (
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
+        fontSize: '14px'
     },
     ...theme.applyStyles('dark', {
         backgroundColor: 'transparent',
@@ -47,7 +49,7 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 export default function GiftSection() {
     return (
         <section className='h-full mb-10'>
-            <div className='p-8 mt-4 text-black'>
+            <div className='py-8 px-4 mt-4 text-black'>
                 <>
                     <motion.h1
                         initial={{ opacity: 0 }}
@@ -69,6 +71,7 @@ export default function GiftSection() {
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         transition={{ duration: 1 }}
+                        className='flex justify-center items-center sm:px-20 md:px-0'
                     >
                         <Accordion>
                             <AccordionSummary

@@ -97,7 +97,7 @@ export default function BrideGroomSection() {
                     initial="offscreen"
                     whileInView="onscreen"
                     variants={motionVariants}
-                    viewport={{ once: true, amount: 0.8 }}
+                    viewport={{ once: true }}
                     className='overflow-hidden mx-8 cursor-pointer'
                     onClick={() => setSelectedImg(thegroombride1)}
                 >
@@ -107,7 +107,7 @@ export default function BrideGroomSection() {
                     initial="offscreen"
                     whileInView="onscreen"
                     variants={motionVariants}
-                    viewport={{ once: true, amount: 0.8 }}
+                    viewport={{ once: true }}
                     className='overflow-hidden mx-8 cursor-pointer'
                     onClick={() => setSelectedImg(thegroombride2)}
                 >
@@ -117,7 +117,7 @@ export default function BrideGroomSection() {
                     initial="offscreen"
                     whileInView="onscreen"
                     variants={motionVariants}
-                    viewport={{ once: true, amount: 0.8 }}
+                    viewport={{ once: true }}
                     className='overflow-hidden mx-8 cursor-pointer'
                     onClick={() => setSelectedImg(thegroombride3)}
                 >

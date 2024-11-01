@@ -54,11 +54,11 @@ export default function MainPages() {
     <>
       <audio ref={audioRef} src={music}></audio>
       <OpeningCover onClose={handleClose} animationScroll={isAnimation} />
-      <div div className='flex relative overflow-x-hidden'>
-        <div className='h-screen hidden sm:block md:w-7/12 lg:w-8/12 relative'>
+      <div div className='flex relative overflow-x-hidden size-full'>
+        <div className='h-screen hidden md:block md:w-7/12 lg:w-8/12 relative'>
           <BannerDesktopSection />
         </div>
-        <div className='container size-full md:w-5/12 lg:w-4/12 relative'>
+        <div className='size-full md:w-5/12 lg:w-4/12 relative'>
           <button onClick={togglePlayPause} className='fixed right-0 bottom-20 m-1 p-2 z-[100] border-4 border-black/70 rounded-full bg-white'>
             {!isPlaying ? <FaMicrophoneSlash /> : <FaMicrophone />}
           </button>

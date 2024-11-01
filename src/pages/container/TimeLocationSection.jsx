@@ -27,7 +27,7 @@ export default function TimeLocationSection() {
             <hr className='border-t-black border w-3/4 m-auto'></hr>
             <div className='relative m-auto text-center size-full my-14'>
                 <h1 className='text-3xl tracking-[0.2em] font-greatvibes'>Wedding Reception</h1>
-                <div className='overflow-hidden max-w-fit'>
+                <div className='overflow-hidden'>
                     <img src={dinner} alt="" className='w-3/4 m-auto h-auto rounded-xl py-5' loading='lazy' />
                 </div>
                 <h1 className='text-2xl px-2 font-cormorantgaramond italic'>{`${data.receptions.name}`}</h1>

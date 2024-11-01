@@ -7,11 +7,12 @@ function App() {
 
   return (
     <>
-      <Router>
+      {/* <Router>
         <Routes>
           <Route path='/:username' element={<MainPages />} />
         </Routes>
-      </Router>
+      </Router> */}
+      <MainPages />
 
       <Toaster position='top center'/>
     </>

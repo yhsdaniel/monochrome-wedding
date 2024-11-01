@@ -5,7 +5,7 @@ import toast from 'react-hot-toast'
 import GenerateAvatar from '../components/GenerateAvatar'
 import { MotionDiv, MotionH1 } from '../components/ui/MotionOpacity'
 
-export default function RSVPSection({ userData }) {
+export default function RSVPSection() {
     const [isVisible, setIsVisible] = useState('true')
     const [dataAttendance, setDataAttendance] = useState(null)
 
@@ -31,7 +31,7 @@ export default function RSVPSection({ userData }) {
 
     const getAttendance = async () => {
         try {
-            const { data: list, error } = await supabase.from('attendance').select(`*`).eq('bride_id', userData.id)
+            const { data: list, error } = await supabase.from('attendance').select(`*`)
             setDataAttendance(list)
             setIsVisible('true')
             handleReset()
@@ -72,7 +72,7 @@ export default function RSVPSection({ userData }) {
                 guest: formData.attendance === 'false' ? '0' : formData.guest,
                 church: formData.attendance === 'false' ? 'false' : formData.church,
                 reception: formData.attendance === 'false' ? 'false' : formData.reception,
-                bride_id: userData.id
+                bride_id: 4
             })
             dataAttendance.push(user)
             getAttendance()

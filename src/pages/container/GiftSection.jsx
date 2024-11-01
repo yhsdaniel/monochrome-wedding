@@ -4,7 +4,7 @@ import MuiAccordion from '@mui/material/Accordion';
 import MuiAccordionSummary from '@mui/material/AccordionSummary';
 import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import { styled } from '@mui/material/styles';
-import bca from '../../../public/images/BCA.png'
+import bca from '/images/BCA.png'
 import Clipboard from '../components/ui/Clipboard';
 
 const Accordion = styled((props) => (

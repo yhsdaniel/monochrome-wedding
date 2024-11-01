@@ -55,7 +55,7 @@ export default function BrideGroomSection() {
                     {/* Instagram Link */}
                     <MotionDiv className='py-4 text-md font-semibold'>
                         <p className='text-sm font-quicksand tracking-widest'>SON OF</p>
-                        <p className='italic font-cormorantgaramond py-5 px-5'>Mr. {data.men.father} & Mrs. {data.women.name}</p>
+                        <p className='italic font-cormorantgaramond py-5 px-5'>Mr. {data.men.father} & Mrs. {data.men.mother}</p>
                     </MotionDiv>
                 </div>
             </div>

@@ -21,8 +21,8 @@ export default function ShareSection() {
 
     return (
         <section className='mb-28'>
-            <div className='flex justify-center items-center size-full my-10 px-20 md:px-6'>
-                <p className='font-quicksand tracking-widest text-sm text-center italic font-bold'>
+            <div className='flex justify-center items-center size-full my-10 px-8 md:px-6'>
+                <p className='font-quicksand tracking-widest text-xs md:text-sm text-center italic font-bold'>
                     {`"${data.quotes}"`}
                 </p>
             </div>

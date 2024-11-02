@@ -65,20 +65,24 @@ export default function RSVPSection() {
     const handleSubmit = async (e) => {
         e.preventDefault()
         try {
-            const { data: user, error } = await supabase.from('attendance').insert({
-                name: formData.name,
-                message: formData.message,
-                attendance: formData.attendance,
-                guest: formData.attendance === 'false' ? '0' : formData.guest,
-                church: formData.attendance === 'false' ? 'false' : formData.church,
-                reception: formData.attendance === 'false' ? 'false' : formData.reception,
-                bride_id: 4
-            })
-            dataAttendance.push(user)
-            getAttendance()
-            toast.success('Thank you for your prayers')
+            if (formData.name === '' || formData.message === '') {
+                toast.error('Please fill the name and message ')
+            } else {
+                const { data: user, error } = await supabase.from('attendance').insert({
+                    name: formData.name,
+                    message: formData.message,
+                    attendance: formData.attendance,
+                    guest: formData.attendance === 'false' ? '0' : formData.guest,
+                    church: formData.attendance === 'false' ? 'false' : formData.church,
+                    reception: formData.attendance === 'false' ? 'false' : formData.reception,
+                    bride_id: 4
+                })
+                dataAttendance.push(user)
+                getAttendance()
+                toast.success('Thank you for your prayers')
 
-            if (error) throw error
+                if (error) throw error
+            }
         } catch (error) {
             console.log(error)
         }
@@ -106,11 +110,11 @@ export default function RSVPSection() {
                 <form onSubmit={handleSubmit} className="max-w-sm mb-20 mx-auto">
                     <MotionDiv className="mb-4">
                         <label htmlFor="name" className="block mb-1 text-lg font-medium text-black">FULL NAME</label>
-                        <input type="name" id="name" name='name' value={formData.name} className="border-b border-gray-300 text-black text-lg block w-full p-2 bg-transparent placeholder:text-black/50 focus-visible:border-none" placeholder="Name ..." onChange={handleChange} />
+                        <input type="text" id="name" name='name' value={formData.name} className="border-b border-gray-300 text-black text-lg block w-full p-2 bg-transparent placeholder:text-black/50 focus-visible:outline-none" placeholder="Name ..." onChange={handleChange} required />
                     </MotionDiv>
                     <MotionDiv className="mb-4">
                         <label htmlFor="message" className="block mb-1 text-lg font-medium text-black">MESSAGE:</label>
-                        <textarea id="message" name='message' rows="4" value={formData.message} className="border border-gray-300 text-black text-lg rounded-lg block w-full p-2 bg-transparent placeholder:text-black/50" placeholder="Message..." onChange={handleChange}></textarea>
+                        <textarea id="message" name='message' rows="4" value={formData.message} className="border border-gray-300 text-black text-lg rounded-lg block w-full p-2 bg-transparent placeholder:text-black/50 focus-visible:outline-none" placeholder="Message..." onChange={handleChange} required></textarea>
                     </MotionDiv>
                     <MotionDiv className="mb-4">
                         <label className="block text-lg font-medium text-black">CONFIRMATION OF ATTENDANCE</label>
@@ -142,7 +146,7 @@ export default function RSVPSection() {
                             </div>
                             <div className='mb-4'>
                                 <label htmlFor="guest" className="block mb-1 text-lg font-medium text-black">GUEST</label>
-                                <select id="guest" name='guest' value={formData.guest} className="border border-gray-300 text-black text-xl rounded-lg block w-full p-2 bg-transparent placeholder:text-black/50" required onChange={handleChange}>
+                                <select id="guest" name='guest' value={formData.guest} className="border border-gray-300 text-black text-xl rounded-lg block w-full p-2 bg-transparent" onChange={handleChange}>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                 </select>
@@ -163,16 +167,16 @@ export default function RSVPSection() {
                     <MotionH1 className='text-2xl text-center my-4 tracking-widest font-greatvibes'>
                         for groom and bride
                     </MotionH1>
-                    <div className='max-h-96 overflow-y-auto overflow-x-auto my-10 scrollbar-custom'>
+                    <div className='max-h-80 overflow-y-auto overflow-x-auto my-10 scrollbar-custom'>
                         {dataAttendance?.map(value => (
-                            <MotionDiv key={value.id} className='p-1 flex text-lg text-black'>
-                                <div className='w-full py-2 px-2 bg-white rounded-lg border border-black/30 flex'>
+                            <MotionDiv key={value.id} className='pb-1 flex text-lg text-black'>
+                                <div className='w-full py-2 px-2 rounded-2xl border border-black/20 flex'>
                                     <div className='w-2/12 flex justify-center items-start'>
                                         <GenerateAvatar name={value.name} />
                                     </div>
-                                    <div className='w-10/12'>
-                                        <p className='font-bold text-lg'>{value.name}</p>
-                                        <p className='text-lg my-4 pr-4 break-words'>{value.message}</p>
+                                    <div className='w-10/12 px-2'>
+                                        <p className='font-bold text-lg font-cormorantgaramond'>{value.name}</p>
+                                        <p className='text-lg my-1 break-words font-cormorantgaramond'>{value.message}</p>
                                     </div>
                                 </div>
                             </MotionDiv>

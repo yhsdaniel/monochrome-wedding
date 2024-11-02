@@ -21,7 +21,7 @@ export default function OpeningCover({ onClose, animationScroll }) {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1, delay: 0.6 }}
-                    className='my-10'
+                    className='text-sm my-4 font-cormorantgaramond'
                 >
                     We joyfully invite you to share in our happiness as we unite in marriage.
                 </motion.p>
@@ -29,7 +29,7 @@ export default function OpeningCover({ onClose, animationScroll }) {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1, delay: 0.9 }}
-                    className='my-10 text-lg'
+                    className='my-4 text-lg font-cormorantgaramond'
                 >
                     {data.date}
                 </motion.p>
@@ -37,7 +37,7 @@ export default function OpeningCover({ onClose, animationScroll }) {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1, delay: 1.2 }}
-                    className='py-2 px-4 bg-white hover:shadow-shadowHover text-black rounded-xl duration-200 ease-in-out'
+                    className='py-2 px-4 my-8 text-sm bg-white hover:shadow-shadowHover text-black rounded-xl duration-200 ease-in-out'
                     onClick={onClose}
                 >
                     Open Invitation

@@ -6,6 +6,7 @@ import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import { styled } from '@mui/material/styles';
 import bca from '/images/BCA.png'
 import Clipboard from '../components/ui/Clipboard';
+import { MotionH1 } from '../components/ui/MotionOpacity';
 
 const Accordion = styled((props) => (
     <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -58,12 +59,12 @@ export default function GiftSection() {
                         className='text-4xl text-center my-4 tracking-widest font-cormorantgaramond'
                     >
                         SEND GIFT
-                    </motion.h1>    
+                    </motion.h1>
                     <motion.h1
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         transition={{ duration: 1 }}
-                        className='text-2xl text-center my-4 tracking-widest font-greatvibes'
+                        className='text-2xl text-center my-2 tracking-widest font-greatvibes'
                     >
                         for groom and bride
                     </motion.h1>
@@ -71,8 +72,11 @@ export default function GiftSection() {
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         transition={{ duration: 1 }}
-                        className='flex justify-center items-center sm:px-20 md:px-0'
+                        className='flex flex-col justify-center items-center sm:px-20 md:px-0'
                     >
+                        <MotionH1 className='text-md text-center my-4 font-cormorantgaramond'>
+                            Your blessing is a gift that means a lot to us, and if giving is an expression of your love, you can give gifts cashless.
+                        </MotionH1>
                         <Accordion>
                             <AccordionSummary
                                 aria-controls='panel1-content'

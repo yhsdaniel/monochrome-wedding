@@ -52,7 +52,11 @@ body {
 }
 
 select {
-  display: inline-block;
+  appearance: none;
+  -webkit-appearance: none;
+  background: url('/images/down-arrow.png') no-repeat right 10px center;
+  background-size: 12px;
+  padding-right: 20px;
 }
 
 .image-grid {

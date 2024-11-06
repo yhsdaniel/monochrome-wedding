@@ -133,8 +133,7 @@ select {
   z-index: 1;
 }
 
-.scrollbar-custom::-webkit-scrollbar-track,
-.scrollbar-custom::-moz-scrollbar-track {
+.scrollbar-custom::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
@@ -142,14 +141,12 @@ select {
   background-color: #F5F5F5;
 }
 
-.scrollbar-custom::-webkit-scrollbar,
-.scrollbar-custom::-moz-scrollbar {
+.scrollbar-custom::-webkit-scrollbar {
   width: 8px;
   background-color: #F5F5F5;
 }
 
-.scrollbar-custom::-webkit-scrollbar-thumb,
-.scrollbar-custom::-moz-scrollbar-thumb {
+.scrollbar-custom::-webkit-scrollbar-thumb {
   border-radius: 10px;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .5);
   -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, .5);
